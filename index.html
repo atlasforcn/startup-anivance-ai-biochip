@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anivance AI Biochip Workbench</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="title-block">
+          <p class="eyebrow">112 FITI · 第一梯次 · 創業傑出獎</p>
+          <h1>Anivance AI 仿生晶片分析工作台</h1>
+        </div>
+        <a class="source-pill" href="https://fiti.stpi.niar.org.tw/global/17a277c2bf944081b748c9c8f5261beb" target="_blank" rel="noreferrer">
+          <span>比賽來源</span>
+          <strong>FITI 112 年第一梯次決選暨頒獎典禮</strong>
+        </a>
+      </header>
+
+      <section class="summary-grid" aria-label="實驗總覽">
+        <article class="metric">
+          <span>分析批次</span>
+          <strong id="metric-batches">3</strong>
+          <small>2 筆進行中，1 筆需複核</small>
+        </article>
+        <article class="metric warm">
+          <span>AI 風險分數</span>
+          <strong id="metric-risk">42</strong>
+          <small id="metric-risk-copy">中度反應，建議追加屏障檢測</small>
+        </article>
+        <article class="metric">
+          <span>影像品質</span>
+          <strong id="metric-quality">94%</strong>
+          <small>自動篩掉 6% 低品質視野</small>
+        </article>
+        <article class="metric dark">
+          <span>報告進度</span>
+          <strong id="metric-report">68%</strong>
+          <small>摘要、端點與圖表已同步</small>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel batch-panel" aria-label="實驗批次">
+          <div class="panel-head">
+            <p>實驗批次</p>
+            <button class="ghost-button" id="queue-button" type="button">排程</button>
+          </div>
+          <div class="batch-list" id="batch-list"></div>
+        </aside>
+
+        <section class="panel chip-panel" aria-label="晶片讀值">
+          <div class="panel-head">
+            <p>仿生晶片讀值</p>
+            <div class="segmented" aria-label="分析模式">
+              <button class="segment active" type="button" data-mode="toxicity">毒性</button>
+              <button class="segment" type="button" data-mode="barrier">屏障</button>
+              <button class="segment" type="button" data-mode="inflammation">發炎</button>
+            </div>
+          </div>
+
+          <div class="chip-stage">
+            <canvas id="chip-canvas" width="620" height="360" aria-label="仿生晶片微流道示意"></canvas>
+            <div class="chip-caption">
+              <strong id="chip-title">肺泡氣霧暴露晶片</strong>
+              <span id="chip-subtitle">動態氣霧呼吸系統 · 3D 仿生組織</span>
+            </div>
+          </div>
+
+          <div class="dose-row">
+            <label>
+              <span>暴露劑量</span>
+              <input id="dose-slider" type="range" min="5" max="90" value="35" />
+            </label>
+            <strong id="dose-value">35%</strong>
+            <button id="analyze-button" type="button">重新分析</button>
+          </div>
+
+          <div class="readout-grid" id="readout-grid"></div>
+        </section>
+
+        <aside class="panel ai-panel" aria-label="AI 判讀">
+          <div class="panel-head">
+            <p>AI 判讀</p>
+            <span class="live-dot">模型更新中</span>
+          </div>
+          <div class="risk-card" id="risk-card"></div>
+          <div class="recommendations" id="recommendations"></div>
+          <div class="source-box">
+            <span>獎項來源</span>
+            <p>FITI 創新創業激勵計畫，112 年第一梯次決選暨頒獎典禮，創業傑出獎，Anivance AI。</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel compare-panel">
+          <div class="panel-head">
+            <p>候選條件比較</p>
+            <button class="ghost-button" id="promote-button" type="button">加入候選</button>
+          </div>
+          <div class="candidate-list" id="candidate-list"></div>
+        </article>
+
+        <article class="panel report-panel">
+          <div class="panel-head">
+            <p>報告摘要</p>
+            <button class="ghost-button" id="report-button" type="button">產生摘要</button>
+          </div>
+          <div class="endpoint-controls" aria-label="報告端點">
+            <label><input type="checkbox" value="存活率" checked /> 存活率</label>
+            <label><input type="checkbox" value="屏障完整性" checked /> 屏障完整性</label>
+            <label><input type="checkbox" value="發炎反應" checked /> 發炎反應</label>
+            <label><input type="checkbox" value="影像品質" checked /> 影像品質</label>
+          </div>
+          <div class="report-output" id="report-output"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
