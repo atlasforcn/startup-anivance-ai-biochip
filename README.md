@@ -1,5 +1,21 @@
 # Anivance AI Biochip Workbench
 
+## 快速看懂
+
+![startup-anivance-ai-biochip 功能截圖](docs/preview.png)
+
+- 線上 Demo：https://atlasforcn.github.io/startup-anivance-ai-biochip/
+- 這個原型在做什麼：把 Anivance AI 做成 AI 生物晶片分析工作台，呈現實驗樣本、晶片訊號與模型判讀。
+- 特色定位：特色是把深科技題目轉成研究人員能看的資料流程，而不是只放一張 AI 分析圖。
+- 操作流程：選擇樣本與晶片批次 → 查看訊號品質、模型判讀與風險提示 → 輸出分析摘要與後續實驗建議
+
+<details>
+<summary>展開完整功能流程截圖</summary>
+
+![startup-anivance-ai-biochip 完整功能流程截圖](docs/flow.png)
+
+</details>
+
 這個 repo 是依據 `Anivance AI` 在 FITI 創新創業激勵計畫中的得獎概念做出的前端原型。原型把「人體仿生器官晶片、3D 仿生組織、動態氣霧呼吸系統、自動化分析和 AI 生物分析軟體」理解成一個仿生晶片實驗與 AI 判讀工作台。
 
 ## 比賽來源
