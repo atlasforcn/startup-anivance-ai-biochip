@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- repo-snapshot:start -->
+    <section class="repo-snapshot repo-snapshot--chip" aria-label="專案辨識預覽：Anivance AI" style="--snap-bg: #0d1715; --snap-bg-2: #263a34; --snap-ink: #f1f7ef; --snap-muted: #aab8b2; --snap-accent: #9be35b; --snap-accent-2: #42d9c8;">
+      <div class="snapshot-copy">
+        <p class="snapshot-kicker">Biochip intelligence</p>
+        <div class="snapshot-name">Anivance AI</div>
+        <p class="snapshot-tagline">把仿生晶片訊號、實驗批次與模型判讀，凝縮成具有實驗室感的分析工作台。</p>
+        <div class="snapshot-chips" aria-label="核心辨識元素">
+        <span>晶片訊號</span>
+        <span>模型判讀</span>
+        <span>批次追蹤</span>
+        </div>
+      </div>
+      <div class="snapshot-scene" aria-hidden="true">
+        <div class="snapshot-device">
+          <div class="snapshot-device-head">
+            <span>Assay grid</span>
+            <strong>12 通道訊號比對</strong>
+          </div>
+          <div class="snapshot-visual snapshot-visual--chip">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="snapshot-data-row">
+          <span><b>88</b>可信度</span>
+          <span><b>12</b>通道</span>
+          <span><b>4</b>批次</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- repo-snapshot:end -->
+    <div class="demo-boundary" role="note">
+      <strong>Prototype</strong>
+      <span>靜態互動原型；畫面資料、評分、AI、金流、醫療、法律與安全流程皆為示範，不代表原團隊官方產品或實際服務。</span>
+    </div>
     <main class="app-shell">
       <header class="topbar">
         <div class="title-block">
@@ -88,10 +122,10 @@
           </div>
           <div class="risk-card" id="risk-card"></div>
           <div class="recommendations" id="recommendations"></div>
-          <div class="source-box">
-            <span>獎項來源</span>
+          <details class="source-box">
+            <summary>獎項來源</summary>
             <p>FITI 創新創業激勵計畫，112 年第一梯次決選暨頒獎典禮，創業傑出獎，Anivance AI。</p>
-          </div>
+          </details>
         </aside>
       </section>
 
